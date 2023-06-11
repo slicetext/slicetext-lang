@@ -37,6 +37,7 @@ namespace Lang
                     {
                         a3.Add(t);
                     }
+                    Console.WriteLine(string.Join(" ",a2[1])+"\n"+string.Join(" ",a3));
                 }
             }
         }
@@ -130,7 +131,7 @@ namespace Lang
                     error(line,"Unterminated String");
                 }
                 i++;
-                string value=code.Substring(start+1,i-1);
+                string value=code.Substring(start+1,i-start-1);
                 tokens.Add(TokenType.STRING);
                 types.Add(value);
             }
