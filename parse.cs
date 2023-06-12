@@ -5,6 +5,7 @@ namespace Parse
     {
         private int i=0;
         private int line=0;
+        private TokenType lookahead;
         public void parse(List<TokenType> Tokens,List<object> Types)
         {
             for (i=0;i<Tokens.Count;i++)
@@ -12,7 +13,7 @@ namespace Parse
                 TokenType current=Tokens[i];
                 if(i<Tokens.Count-1)
                 {
-                    TokenType lookahead=Tokens[i+1];
+                    lookahead=Tokens[i+1];
                 }
                 if(current==TokenType.NEWLINE)
                 {
@@ -20,17 +21,28 @@ namespace Parse
                 }
             }
         }
-        void eat(List<TokenType> expected,TokenType lookahead)
+        bool eat(List<TokenType> expected,TokenType lookahead)
         {
             foreach(TokenType j in expected)
             {
                 if(lookahead==j)
                 {
-                    i++;
-                    return;
+                    return true;
                 }
             }
-            error(line,"Expected "+expected+", instead got "+lookahead);
+            error(line,"Expected "+string.Join(", ",expected)+", instead got "+lookahead);
+            return false;
+        }
+        bool n_eat(List<TokenType> expected,TokenType lookahead)
+        {
+            foreach(TokenType j in expected)
+            {
+                if(lookahead==j)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         void error(int line,string message)
         {
