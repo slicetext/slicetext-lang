@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\OneDrive\\Documents\\Theo\\Dotnet\\Slicetext\\Lang.csproj": {}
+    "C:\\Users\\Owner\\onedrive\\documents\\theo\\dotnet\\slicetext\\Lang.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\OneDrive\\Documents\\Theo\\Dotnet\\Slicetext\\Lang.csproj": {
+    "C:\\Users\\Owner\\onedrive\\documents\\theo\\dotnet\\slicetext\\Lang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\OneDrive\\Documents\\Theo\\Dotnet\\Slicetext\\Lang.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\onedrive\\documents\\theo\\dotnet\\slicetext\\Lang.csproj",
         "projectName": "Lang",
-        "projectPath": "C:\\Users\\Owner\\OneDrive\\Documents\\Theo\\Dotnet\\Slicetext\\Lang.csproj",
+        "projectPath": "C:\\Users\\Owner\\onedrive\\documents\\theo\\dotnet\\slicetext\\Lang.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\OneDrive\\Documents\\Theo\\Dotnet\\Slicetext\\obj\\",
+        "outputPath": "C:\\Users\\Owner\\onedrive\\documents\\theo\\dotnet\\slicetext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"

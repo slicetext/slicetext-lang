@@ -1,4 +1,4 @@
-﻿using Expr;
+﻿using Parse;
 namespace Lang
 {
     class Program
@@ -15,7 +15,7 @@ namespace Lang
             IDENTIFIER, STRING, NUMBER,
             //KEYWORDS
             AND,CLASS,ELSE,FALSE,FUNC,FOR,IF,NULL,OR,PRINT,RETURN,SUPER,TRUE,WHILE,VAR,THIS,
-            EOF
+            EOF, NEWLINE
         }
         public static void Main(string[] args)
         {
@@ -38,6 +38,9 @@ namespace Lang
                         a3.Add(t);
                     }
                     Console.WriteLine(string.Join(" ",a2[1])+"\n"+string.Join(" ",a3));
+                    var p=new Parse.Parser();
+                    p.parse(a3,a2[1]);
+
                 }
             }
         }
@@ -90,7 +93,7 @@ namespace Lang
                     case '\t':
                         // Ignore whitespace.
                         break;
-                    case '\n':line++; break;
+                    case '\n':line++;tokens.Add(TokenType.NEWLINE);types.Add("null"); break;
                     default: if(Char.IsDigit(current))
                     {
                     number();}
