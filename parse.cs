@@ -10,23 +10,27 @@ namespace Parse
             for (i=0;i<Tokens.Count;i++)
             {
                 TokenType current=Tokens[i];
-                TokenType lookahead=Tokens[i+1];
+                if(i<Tokens.Count-1)
+                {
+                    TokenType lookahead=Tokens[i+1];
+                }
                 if(current==TokenType.NEWLINE)
                 {
                     line++;
                 }
             }
         }
-        void eat(TokenType expected,TokenType lookahead)
+        void eat(List<TokenType> expected,TokenType lookahead)
         {
-            if(lookahead==expected)
+            foreach(TokenType j in expected)
             {
-                i++;
+                if(lookahead==j)
+                {
+                    i++;
+                    return;
+                }
             }
-            else
-            {
-                error(line,"Expected "+expected+", instead got "+lookahead);
-            }
+            error(line,"Expected "+expected+", instead got "+lookahead);
         }
         void error(int line,string message)
         {
