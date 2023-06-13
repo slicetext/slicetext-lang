@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uY7zc34V9vxUXjfC3YFVRDrMH6ewE1KwntDin1+bVLgKvMSTjzAb0eKPH6qpQ5Ij0yM4mSacegEd7iBpfGTdow==",
+  "dgSpecHash": "dJVvN9USBY303VQ/9olRGTjEUjR9tz1GGySVYJXRumJ9sBOn5L/9lZmIcvfBZ1dsR0H9bXmegXKgc26rwqh1Pw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Owner\\OneDrive\\Documents\\Theo\\Dotnet\\Slicetext\\Lang.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\7.0.5\\microsoft.netcore.app.runtime.linux-x64.7.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\7.0.5\\microsoft.aspnetcore.app.runtime.linux-x64.7.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\7.0.5\\microsoft.netcore.app.host.linux-x64.7.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
